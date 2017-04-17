@@ -6,9 +6,9 @@
   "scripts": {
     "init": "gitbook init",
     "start": "gitbook serve",
-    "build-js": "gitbook build js && rm -rf gh-pages/js/ && cp -R js/_book/ gh-pages/js/",
+    "build-js": "gitbook build js && rm -rf pages/js/ && cp -R js/_book/ pages/js/",
     "build-riot": "gitbook build",
-    "publish": "gh-pages -d gh-pages -m 'auto publish'"
+    "publish": "gh-pages -d pages -m 'auto publish'"
   },
   "author": "k-kuwahara",
   "license": "MIT",

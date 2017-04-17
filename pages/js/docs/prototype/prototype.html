@@ -1,0 +1,433 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>prototype · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chain.md" />
+    
+    
+    <link rel="prev" href="new.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Basis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../scope.html">
+            
+                <a href="../scope.html">
+            
+                    
+                    Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../function.html">
+            
+                <a href="../function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../prototype.html">
+            
+                <a href="../prototype.html">
+            
+                    
+                    About prototype
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3.2" data-path="prototype.html">
+            
+                <a href="prototype.html">
+            
+                    
+                    prototype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="chain.md">
+            
+                <span>
+            
+                    
+                    prototype chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../call_apply.html">
+            
+                <a href="../call_apply.html">
+            
+                    
+                    call, apply method
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    ES2015
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../arrow_func.html">
+            
+                <a href="../arrow_func.html">
+            
+                    
+                    Arrow Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >prototype</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="prototype">Prototype</h1>
+<h2 id="&#x25BC;&#x8AAC;&#x660E;">&#x25BC;&#x8AAC;&#x660E;</h2>
+<p><code>prototype</code>&#x306F;&#x4E00;&#x3064;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x3002;&#x95A2;&#x6570;&#x3092;&#x5B9A;&#x7FA9;&#x3059;&#x308B;&#x3068;&#x3001;&#x5FC5;&#x305A;&#x305D;&#x306E;&#x95A2;&#x6570;&#x306E;&#x5185;&#x90E8;&#x306B;&#x4E00;&#x7DD2;&#x306B;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
+&#x3067;&#x306F;&#x3053;&#x306E;<code>prototype</code>&#x3063;&#x3066;&#x3069;&#x3093;&#x306A;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304B;&#x3001;&#x3092;&#x898B;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>&#x307E;&#x305A;&#x306F;&#x95A2;&#x6570;hoge&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hoge</span>(<span class="hljs-params"></span>) </span>{}
+
+<span class="hljs-comment">// &#x95A2;&#x6570;hoge&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x78BA;&#x8A8D;</span>
+<span class="hljs-built_in">console</span>.dir(hoge)
+</code></pre>
+<p>&#x4E2D;&#x8EAB;&#x306F;&#x3053;&#x3046;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-JavaScript">function hoge()
+  arguments: null
+  caller: null
+  length: 0
+  name: &quot;hoge&quot;
+  prototype: Object   // =&gt; &#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;
+  __proto__: ()
+  [[FunctionLocation]]: VM23662:1
+  [[Scopes]]: Scopes[1]
+</code></pre>
+<p>prototype&#x306B;&#x4F3C;&#x305F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3068;&#x3057;&#x3066;<code>__proto__</code>&#x3068;&#x3044;&#x3046;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304C;&#x5B58;&#x5728;&#x3057;&#x307E;&#x3059;&#x3002;&#xFF08;&#x4E0A;&#x8A18;&#x306B;&#x3082;&#x3044;&#x307E;&#x3059;&#x306D;&#xFF09;
+JavaScript&#x3067;&#x306F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x308B;&#x3068;&#x3001;<strong>&#x88CF;&#x3067;&#x52DD;&#x624B;&#x306B;</strong><code>__proto__</code><strong>&#x3068;&#x3044;&#x3046;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x304C;&#x4F5C;&#x3089;&#x308C;&#x307E;&#x3059;</strong>&#x3002;
+&#x3082;&#x3061;&#x308D;&#x3093;&#x95A2;&#x6570;&#x306F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;&#x95A2;&#x6570;&#x306B;&#x3082;&#x4F5C;&#x3089;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x203B;<code>ES2015</code>&#x306E;&#x30A2;&#x30ED;&#x30FC;&#x95A2;&#x6570;&#x3067;&#x306F;<code>prototype</code>&#x306F;&#x751F;&#x6210;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+<h2 id="&#x25BC;proto&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;">&#x25BC;<code>__proto__</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</h2>
+<p>&#x3053;&#x3053;&#x3067;<code>__proto__</code>&#x3092;&#x5C55;&#x958B;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;
+&#x3059;&#x308B;&#x3068;&#x305F;&#x304F;&#x3055;&#x3093;&#x306E;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x3053;&#x306E;&#x5B50;&#x306F;&#x8AB0;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#xFF1F;
+&#x7B54;&#x3048;&#x304B;&#x3089;&#x7533;&#x3057;&#x4E0A;&#x3052;&#x307E;&#x3059;&#x3068;&#x3001;&#x3053;&#x3046;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-JavaScript">hoge.__proto__ === Funciton.prototype  <span class="hljs-comment">// =&gt; true</span>
+</code></pre>
+<p>&#x306F;&#x3044;&#x3002;&#x3064;&#x307E;&#x308A;&#x3001;<code>Fuction.prototype</code>&#x3060;&#x3063;&#x305F;&#x308F;&#x3051;&#x3067;&#x3059;&#x3002;
+&#x300C;<code>Function</code>&#x3063;&#x3066;&#x8AB0;&#xFF1F;&#x300D;&#x3068;&#x306A;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x3053;&#x306E;&#x5B50;&#x306F;JavaScript&#x306B;<strong>&#x5143;&#x3005;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x305F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#xFF08;&#x53B3;&#x5BC6;&#x306B;&#x306F;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x3001;&#x3064;&#x307E;&#x308A;&#x95A2;&#x6570;&#xFF09;</strong>&#x3067;&#x3059;&#x3002;
+&#x4ED6;&#x306B;&#x306F;<code>Object, Number, Array, Boolean</code>&#x306A;&#x3069;&#x304C;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x3053;&#x306E;&#x5B50;&#x3089;&#x306F;<code>window</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x305F;&#x3081;&#x3001;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x3069;&#x3053;&#x304B;&#x3089;&#x3067;&#x3082;&#x547C;&#x3079;&#x307E;&#x3059;&#x3002;
+&#x3053;&#x306E;&#x4E2D;&#x3067;1&#x3064;&#x3060;&#x3051;&#x7279;&#x6B8A;&#x306A;&#x5B50;&#x304C;&#x3044;&#x307E;&#x3059;&#x3002;<code>Object</code>&#x3067;&#x3059;&#x3002;
+&#x5168;&#x3066;&#x306E;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x30FB;&#x95A2;&#x6570;&#x306F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;<code>Object.prototype</code>&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
+&#xFF08;&#x6B63;&#x78BA;&#x306B;&#x306F;<strong>&#x300C;&#x53C2;&#x7167;&#x3067;&#x304D;&#x308B;&#x300D;</strong>&#x3067;&#x3059;&#x304C;&#x3001;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3055;&#x306E;&#x305F;&#x3081;&#xFF09;</p>
+<p>&#x5177;&#x4F53;&#x7684;&#x306B;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x95A2;&#x6570;hoge&#x306E;&#x8868;&#x793A;</span>
+<span class="hljs-built_in">console</span>.info(hoge)  <span class="hljs-comment">// =&gt; function hoge() {}</span>
+
+<span class="hljs-comment">// &#x6574;&#x6570;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x306E;&#x8FFD;&#x52A0;</span>
+hoge.number = <span class="hljs-number">123</span>
+<span class="hljs-built_in">console</span>.info(hoge.number)  <span class="hljs-comment">// =&gt; 123</span>
+<span class="hljs-built_in">console</span>.info(hoge.number.toString()) <span class="hljs-comment">// =&gt; &quot;123&quot;</span>
+
+<span class="hljs-comment">// &#x5024;&#x304C;&#x3069;&#x306E;&#x30D7;&#x30EA;&#x30DF;&#x30C6;&#x30A3;&#x30D6;&#x578B;&#x304B;&#x3092;&#x78BA;&#x8A8D;</span>
+<span class="hljs-built_in">console</span>.info(<span class="hljs-keyword">typeof</span> hoge.number)  <span class="hljs-comment">// =&gt; number</span>
+<span class="hljs-built_in">console</span>.info(<span class="hljs-keyword">typeof</span> hoge.number.toString())  <span class="hljs-comment">// =&gt; string</span>
+</code></pre>
+<h2 id="&#x25BC;&#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x30C1;&#x30A7;&#x30FC;&#x30F3;">&#x25BC;&#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x30C1;&#x30A7;&#x30FC;&#x30F3;</h2>
+<p>&#x4E0A;&#x8A18;&#x3067;&#x767B;&#x5834;&#x3057;&#x305F;<code>toString</code>&#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x304C;&#x3001;<code>Object.prototype</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;
+&#x3059;&#x3079;&#x3066;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306F;<code>Object.prototype</code>&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;<code>hoge</code>&#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x3082;&#x3001;&#x305D;&#x306E;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x3082;<code>toString</code>&#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x3092;&#x5B9F;&#x884C;&#x3067;&#x304D;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;
+&#x3053;&#x306E;<code>Object</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;<code>prototype</code>&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3067;&#x304D;&#x308B;&#x306E;&#x306F;&#x3001;<code>&#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x30C1;&#x30A7;&#x30FC;&#x30F3;</code>&#x306A;&#x308B;&#x3082;&#x306E;&#x304C;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3089;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="new.html" class="navigation navigation-prev " aria-label="Previous page: new">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chain.md" class="navigation navigation-next " aria-label="Next page: prototype chain">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"prototype","level":"1.2.3.2","depth":3,"next":{"title":"prototype chain","level":"1.2.3.3","depth":3,"path":"docs/prototype/chain.md","ref":"docs/prototype/chain.md","articles":[]},"previous":{"title":"new","level":"1.2.3.1","depth":3,"path":"docs/prototype/new.md","ref":"docs/prototype/new.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/prototype/prototype.md","mtime":"2017-04-17T14:33:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-17T14:39:36.685Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
