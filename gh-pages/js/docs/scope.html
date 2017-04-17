@@ -1,0 +1,352 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Scope · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="function1.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Basis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="scope.html">
+            
+                <a href="scope.html">
+            
+                    
+                    Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="function1.html">
+            
+                <a href="function1.html">
+            
+                    
+                    Function.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    ES2015
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="arrow_func.html">
+            
+                <a href="arrow_func.html">
+            
+                    
+                    Arrow Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Scope</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="scope">Scope</h1>
+<p>JavaScript&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306F;&#x3001;<code>&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x30B9;&#x30B3;&#x30FC;&#x30D7;</code>&#x3068;<code>&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x30B9;&#x30B3;&#x30FC;&#x30D7;</code>&#x306E;&#xFF12;&#x3064;&#x306B;&#x5206;&#x3051;&#x3089;&#x308C;&#x307E;&#x3059;&#x3002;
+&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x898B;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x306E;&#x5909;&#x6570;</span>
+<span class="hljs-keyword">let</span> hoge = <span class="hljs-string">&apos;hoge&apos;</span>,
+    fuga = <span class="hljs-string">&apos;fuga&apos;</span>
+
+<span class="hljs-comment">// &#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x7528;&#x306E;&#x95A2;&#x6570;</span>
+<span class="hljs-keyword">const</span> show_hoge = () =&gt; {
+   <span class="hljs-keyword">let</span> hoge = <span class="hljs-number">999</span>
+   <span class="hljs-built_in">console</span>.info(hoge)   <span class="hljs-comment">// &#x3053;&#x3053;&#x306B;&#x306F;this&#x306F;&#x4E0D;&#x8981;</span>
+}
+
+<span class="hljs-built_in">console</span>.info(hoge)  <span class="hljs-comment">// =&gt; &apos;hoge&apos;</span>
+show_hoge() <span class="hljs-comment">// =&gt; 999</span>
+
+<span class="hljs-comment">// &#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x5909;&#x6570;&#x306E;&#x5909;&#x66F4;</span>
+<span class="hljs-keyword">const</span> change_hoge = () =&gt; {
+   hoge = <span class="hljs-number">111</span>
+   <span class="hljs-built_in">console</span>.info(hoge)   <span class="hljs-comment">// &#x3053;&#x3053;&#x3082;this&#x306F;&#x4E0D;&#x8981;</span>
+}
+
+<span class="hljs-built_in">console</span>.info(hoge)  <span class="hljs-comment">// =&gt; &apos;hoge&apos;</span>
+change_hoge()   <span class="hljs-comment">// =&gt; 111</span>
+<span class="hljs-built_in">console</span>.info(hoge)  <span class="hljs-comment">// =&gt; 111 &#x66F8;&#x304D;&#x63DB;&#x308F;&#x308B;&#xFF01;</span>
+
+
+<span class="hljs-comment">// &#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x7528;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</span>
+<span class="hljs-keyword">const</span> obj = {
+   foo: <span class="hljs-string">&apos;foo&apos;</span>,
+   fuga: <span class="hljs-number">123</span>,
+   show_inner_fuga: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+       <span class="hljs-built_in">console</span>.info(<span class="hljs-keyword">this</span>.fuga)  <span class="hljs-comment">// &#x3053;&#x3053;&#x306B;&#x306F;this&#x304C;&#x5FC5;&#x8981;</span>
+   },
+   show_outer_fuga: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">console</span>.info(fuga)
+   }
+}
+
+
+<span class="hljs-built_in">console</span>.info(fuga)  <span class="hljs-comment">// =&gt; &apos;fuga&apos;</span>
+<span class="hljs-built_in">console</span>.info(obj.fuga)  <span class="hljs-comment">// =&gt; 123</span>
+
+<span class="hljs-built_in">console</span>.info(foo) <span class="hljs-comment">// =&gt; &#x30A8;&#x30E9;&#x30FC;</span>
+obj.show_inner_fuga() <span class="hljs-comment">// =&gt; 123</span>
+obj.show_outer_fuga() <span class="hljs-comment">// =&gt; &apos;fuga&apos;</span>
+</code></pre>
+<p>&#x5909;&#x6570;&#x306E;&#x982D;&#x306B;<code>let, const&#xFF08;ES5&#x306A;&#x3089; var&#xFF09;</code>&#x3092;&#x4ED8;&#x3051;&#x306A;&#x3044;&#x3068;&#x3001;JavaScript&#x306F;&#x305D;&#x306E;&#x5909;&#x6570;&#x3092;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x306E;&#x5909;&#x6570;&#x3068;&#x307F;&#x306A;&#x3057;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x4E0B;&#x3055;&#x3044;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="function1.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Function.1">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Scope","level":"1.2.1","depth":2,"next":{"title":"Function.1","level":"1.2.2","depth":2,"path":"docs/function1.md","ref":"docs/function1.md","articles":[]},"previous":{"title":"Basis","level":"1.2","depth":1,"ref":"","articles":[{"title":"Scope","level":"1.2.1","depth":2,"path":"docs/scope.md","ref":"docs/scope.md","articles":[]},{"title":"Function.1","level":"1.2.2","depth":2,"path":"docs/function1.md","ref":"docs/function1.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/scope.md","mtime":"2017-04-17T02:45:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-17T01:00:16.596Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
