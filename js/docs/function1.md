@@ -1,9 +1,11 @@
 # Function.1
 
+## ▼概要
+
 JavaScriptでは、 __[関数](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Functions)は1つのオブジェクト__ になります。
 オブジェクトですので __変数に格納__ できますし、 __プロパティを関数に追加する__ こともできますし、__別の関数の引数に渡す__ ことも、__returnで返すこと__もできます。
 
-## 説明
+### ▼関数の定義
 
 ```JavaScript
 // 関数の定義
@@ -53,6 +55,7 @@ var hoge = function fuga() {}
 console.info(hoge.name)   // => "fuga"
 ```
 
+### ▼関数のスコープ
 さらに面白いことに、関数の定義は呼び出しより後に置くことができます。
 
 ```JavaScript
