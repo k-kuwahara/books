@@ -1,4 +1,4 @@
-# Function.1
+# Function
 
 ## ▼概要
 
