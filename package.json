@@ -7,8 +7,7 @@
     "init": "gitbook init",
     "start": "gitbook serve",
     "build": "gitbook build",
-    "publish": "gh-pages -d _book -m  'auto publish book'",
-    "deploy": "npm run build && npm run publish"
+    "publish": "gh-pages -d gh-pages -m 'auto publish'"
   },
   "author": "k-kuwahara",
   "license": "MIT",
