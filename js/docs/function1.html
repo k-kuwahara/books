@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="call_apply.html" />
+    
     
     <link rel="prev" href="scope.html" />
     
@@ -133,6 +135,19 @@
             
                     
                     Function.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="call_apply.html">
+            
+                <a href="call_apply.html">
+            
+                    
+                    call, apply method
             
                 </a>
             
@@ -223,9 +238,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="function1">Function.1</h1>
+<h2 id="&#x25BC;&#x6982;&#x8981;">&#x25BC;&#x6982;&#x8981;</h2>
 <p>JavaScript&#x3067;&#x306F;&#x3001; <strong><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Functions" target="_blank">&#x95A2;&#x6570;</a>&#x306F;1&#x3064;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</strong> &#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;
 &#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x306E;&#x3067; <strong>&#x5909;&#x6570;&#x306B;&#x683C;&#x7D0D;</strong> &#x3067;&#x304D;&#x307E;&#x3059;&#x3057;&#x3001; <strong>&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x3092;&#x95A2;&#x6570;&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;</strong> &#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3057;&#x3001;<strong>&#x5225;&#x306E;&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;&#x306B;&#x6E21;&#x3059;</strong> &#x3053;&#x3068;&#x3082;&#x3001;<strong>return&#x3067;&#x8FD4;&#x3059;&#x3053;&#x3068;</strong>&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<h2 id="&#x8AAC;&#x660E;">&#x8AAC;&#x660E;</h2>
+<h3 id="&#x25BC;&#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;">&#x25BC;&#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;</h3>
 <pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hoge</span>(<span class="hljs-params"></span>) </span>{}
 
@@ -267,6 +283,7 @@ hoge.foo = <span class="hljs-number">123</span>
 <span class="hljs-keyword">var</span> hoge = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fuga</span>(<span class="hljs-params"></span>) </span>{}
 <span class="hljs-built_in">console</span>.info(hoge.name)   <span class="hljs-comment">// =&gt; &quot;fuga&quot;</span>
 </code></pre>
+<h3 id="&#x25BC;&#x95A2;&#x6570;&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;">&#x25BC;&#x95A2;&#x6570;&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;</h3>
 <p>&#x3055;&#x3089;&#x306B;&#x9762;&#x767D;&#x3044;&#x3053;&#x3068;&#x306B;&#x3001;&#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;&#x306F;&#x547C;&#x3073;&#x51FA;&#x3057;&#x3088;&#x308A;&#x5F8C;&#x306B;&#x7F6E;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
 <pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x4EE5;&#x4E0B;&#x306F;&#x52D5;&#x4F5C;&#x3059;&#x308B;</span>
 <span class="hljs-built_in">console</span>.log(square(<span class="hljs-number">5</span>))
@@ -310,10 +327,14 @@ hoge.foo = <span class="hljs-number">123</span>
 
             
                 
-                <a href="scope.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Scope">
+                <a href="scope.html" class="navigation navigation-prev " aria-label="Previous page: Scope">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="call_apply.html" class="navigation navigation-next " aria-label="Next page: call, apply method">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -322,7 +343,7 @@ hoge.foo = <span class="hljs-number">123</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Function.1","level":"1.2.2","depth":2,"next":{"title":"ES2015","level":"1.3","depth":1,"ref":"","articles":[{"title":"Arrow Function","level":"1.3.1","depth":2,"path":"docs/arrow_func.md","ref":"docs/arrow_func.md","articles":[]}]},"previous":{"title":"Scope","level":"1.2.1","depth":2,"path":"docs/scope.md","ref":"docs/scope.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/function1.md","mtime":"2017-04-17T02:07:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-17T01:00:16.596Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Function.1","level":"1.2.2","depth":2,"next":{"title":"call, apply method","level":"1.2.3","depth":2,"path":"docs/call_apply.md","ref":"docs/call_apply.md","articles":[]},"previous":{"title":"Scope","level":"1.2.1","depth":2,"path":"docs/scope.md","ref":"docs/scope.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/function1.md","mtime":"2017-04-17T03:19:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-17T01:00:16.596Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
