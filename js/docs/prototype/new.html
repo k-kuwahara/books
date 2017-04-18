@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>new · GitBook</title>
+        <title>インスタンスの生成 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -94,34 +94,21 @@
                 <a href="../../">
             
                     
-                    Introduction
+                    はじめに
             
                 </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" >
-            
-                <span>
-            
-                    
-                    Basis
-            
-                </span>
             
 
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../scope.html">
+        <li class="chapter " data-level="1.1.1" data-path="../scope.html">
             
                 <a href="../scope.html">
             
                     
-                    Scope
+                    スコープ
             
                 </a>
             
@@ -129,25 +116,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../function.html">
+        <li class="chapter " data-level="1.1.2" data-path="../function.html">
             
                 <a href="../function.html">
             
                     
-                    Function
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.3" data-path="../prototype.html">
-            
-                <a href="../prototype.html">
-            
-                    
-                    About prototype
+                    関数
             
                 </a>
             
@@ -156,12 +130,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.3.1" data-path="new.html">
+        <li class="chapter " data-level="1.1.2.1" data-path="../function/define.html">
             
-                <a href="new.html">
+                <a href="../function/define.html">
             
                     
-                    new
+                    関数の定義
             
                 </a>
             
@@ -169,25 +143,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.2" data-path="prototype.html">
-            
-                <a href="prototype.html">
-            
-                    
-                    prototype
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.3.3" data-path="chain.md">
+        <li class="chapter " data-level="1.1.2.2" data-path="../function/immediate.md">
             
                 <span>
             
                     
-                    prototype chain
+                    即時関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../function/constructor.html">
+            
+                <a href="../function/constructor.html">
+            
+                    
+                    コンストラクタ
             
                 </a>
             
@@ -200,12 +174,70 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="../call_apply.html">
+        <li class="chapter " data-level="1.1.3" data-path="../prototype.html">
+            
+                <a href="../prototype.html">
+            
+                    
+                    プロトタイプについて
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.3.1" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    インスタンスの生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="prototype.html">
+            
+                <a href="prototype.html">
+            
+                    
+                    プロトタイプ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="chain.md">
+            
+                <span>
+            
+                    
+                    プロトタイプチェーン
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../call_apply.html">
             
                 <a href="../call_apply.html">
             
                     
-                    call, apply method
+                    call, applyメソッド
             
                 </a>
             
@@ -218,7 +250,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" >
+        <li class="chapter " data-level="1.2" >
             
                 <span>
             
@@ -232,7 +264,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../arrow_func.html">
+        <li class="chapter " data-level="1.2.1" data-path="../arrow_func.html">
             
                 <a href="../arrow_func.html">
             
@@ -280,7 +312,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >new</a>
+        <a href="../.." >インスタンスの生成</a>
     </h1>
 </div>
 
@@ -297,7 +329,8 @@
                                 
                                 <h1 id="new">new</h1>
 <h2 id="&#x25BC;&#x8AAC;&#x660E;">&#x25BC;&#x8AAC;&#x660E;</h2>
-<p>&#x524D;&#x8FF0;&#x306E;&#x901A;&#x308A;&#x3001;JavaScript&#x306B;&#x306F;&#x30AF;&#x30E9;&#x30B9;&#x69CB;&#x6587;&#x304C;&#x5B58;&#x5728;&#x3057;&#x307E;&#x305B;&#x3093;&#xFF08;&#x3057;&#x304B;&#x3057;&#x3001;<code>class</code>&#x306F;&#x4E88;&#x7D04;&#x5F8C;&#x3067;&#x3059;&#xFF09;&#x304C;&#x3001; <code>new</code>&#x3057;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x751F;&#x6210;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
+<p><code>prototype</code>&#x306E;&#x524D;&#x306B;&#x3001;JavaScript&#x306B;&#x304A;&#x3051;&#x308B;<code>new</code>&#x306E;&#x4F7F;&#x3044;&#x65B9;&#x306B;&#x89E6;&#x308C;&#x307E;&#x3059;&#x3002;
+&#x524D;&#x8FF0;&#x306E;&#x901A;&#x308A;&#x3001;JavaScript&#x306B;&#x306F;&#x30AF;&#x30E9;&#x30B9;&#x69CB;&#x6587;&#x304C;&#x5B58;&#x5728;&#x3057;&#x307E;&#x305B;&#x3093;&#xFF08;&#x3057;&#x304B;&#x3057;&#x3001;<code>class</code>&#x306F;&#x4E88;&#x7D04;&#x5F8C;&#x3067;&#x3059;&#xFF09;&#x304C;&#x3001; <code>new</code>&#x3057;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x751F;&#x6210;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
 &#x5B9F;&#x969B;&#x306B;&#x3084;&#x3063;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
 <pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x306E;&#x5B9A;&#x7FA9;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Animal</span>(<span class="hljs-params">name, age</span>) </span>{
@@ -363,12 +396,12 @@ dog.hello() <span class="hljs-comment">// =&gt; pluto</span>
 
             
                 
-                <a href="../prototype.html" class="navigation navigation-prev " aria-label="Previous page: About prototype">
+                <a href="../prototype.html" class="navigation navigation-prev " aria-label="Previous page: プロトタイプについて">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="prototype.html" class="navigation navigation-next " aria-label="Next page: prototype">
+                <a href="prototype.html" class="navigation navigation-next " aria-label="Next page: プロトタイプ">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -379,7 +412,7 @@ dog.hello() <span class="hljs-comment">// =&gt; pluto</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"new","level":"1.2.3.1","depth":3,"next":{"title":"prototype","level":"1.2.3.2","depth":3,"path":"docs/prototype/prototype.md","ref":"docs/prototype/prototype.md","articles":[]},"previous":{"title":"About prototype","level":"1.2.3","depth":2,"path":"docs/prototype.md","ref":"docs/prototype.md","articles":[{"title":"new","level":"1.2.3.1","depth":3,"path":"docs/prototype/new.md","ref":"docs/prototype/new.md","articles":[]},{"title":"prototype","level":"1.2.3.2","depth":3,"path":"docs/prototype/prototype.md","ref":"docs/prototype/prototype.md","articles":[]},{"title":"prototype chain","level":"1.2.3.3","depth":3,"path":"docs/prototype/chain.md","ref":"docs/prototype/chain.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/prototype/new.md","mtime":"2017-04-17T12:34:19.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-17T14:39:36.685Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"インスタンスの生成","level":"1.1.3.1","depth":3,"next":{"title":"プロトタイプ","level":"1.1.3.2","depth":3,"path":"docs/prototype/prototype.md","ref":"docs/prototype/prototype.md","articles":[]},"previous":{"title":"プロトタイプについて","level":"1.1.3","depth":2,"path":"docs/prototype.md","ref":"docs/prototype.md","articles":[{"title":"インスタンスの生成","level":"1.1.3.1","depth":3,"path":"docs/prototype/new.md","ref":"docs/prototype/new.md","articles":[]},{"title":"プロトタイプ","level":"1.1.3.2","depth":3,"path":"docs/prototype/prototype.md","ref":"docs/prototype/prototype.md","articles":[]},{"title":"プロトタイプチェーン","level":"1.1.3.3","depth":3,"path":"docs/prototype/chain.md","ref":"docs/prototype/chain.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/prototype/new.md","mtime":"2017-04-18T08:12:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-18T08:14:12.995Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
