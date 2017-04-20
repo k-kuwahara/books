@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>コンストラクタ · GitBook</title>
+        <title>即時関数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../prototype.html" />
+    <link rel="next" href="constructor.html" />
     
     
-    <link rel="prev" href="immediate.html" />
+    <link rel="prev" href="define.html" />
     
 
     </head>
@@ -143,7 +143,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.2" data-path="immediate.html">
+        <li class="chapter active" data-level="1.1.2.2" data-path="immediate.html">
             
                 <a href="immediate.html">
             
@@ -156,7 +156,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.2.3" data-path="constructor.html">
+        <li class="chapter " data-level="1.1.2.3" data-path="constructor.html">
             
                 <a href="constructor.html">
             
@@ -312,7 +312,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >コンストラクタ</a>
+        <a href="../.." >即時関数</a>
     </h1>
 </div>
 
@@ -327,10 +327,64 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;">&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;</h1>
-<p>&#x300C;<code>Function</code>&#x3063;&#x3066;&#x8AB0;&#xFF1F;&#x300D;&#x3068;&#x306A;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x3053;&#x306E;&#x5B50;&#x306F;JavaScript&#x306B;<strong>&#x5143;&#x3005;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x305F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#xFF08;&#x53B3;&#x5BC6;&#x306B;&#x306F;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x3001;&#x3064;&#x307E;&#x308A;&#x95A2;&#x6570;&#xFF09;</strong>&#x3067;&#x3059;&#x3002;
-&#x4ED6;&#x306B;&#x306F;<code>Object, Number, Array, Boolean</code>&#x306A;&#x3069;&#x304C;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3053;&#x306E;&#x5B50;&#x3089;&#x306F;<code>window</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x305F;&#x3081;&#x3001;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x3069;&#x3053;&#x304B;&#x3089;&#x3067;&#x3082;&#x547C;&#x3079;&#x307E;&#x3059;&#x3002;</p>
+                                <h1 id="&#x5373;&#x6642;&#x95A2;&#x6570;">&#x5373;&#x6642;&#x95A2;&#x6570;</h1>
+<h2 id="&#x25BC;&#x8AAC;&#x660E;">&#x25BC;&#x8AAC;&#x660E;</h2>
+<p>&#x95A2;&#x6570;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x305D;&#x306E;&#x5834;&#x3067;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x95A2;&#x6570;&#x3067;&#x3059;&#x3002;&#x5B9F;&#x884C;&#x5F8C;&#x306F;&#x6368;&#x3066;&#x3089;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<pre><code>// &#x8981;&#x306F;&#x3053;&#x3093;&#x306A;&#x5B50;&#x3067;&#x3059;
+(function() {
+    //&#x4F55;&#x304B;&#x3057;&#x3089;&#x306E;&#x51E6;&#x7406;
+})()
+
+// ()&#x3092;&#x4E2D;&#x306B;&#x5165;&#x308C;&#x308B;&#x66F8;&#x304D;&#x65B9;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;
+(function() {
+    // &#x4F55;&#x304B;&#x3057;&#x3089;&#x306E;&#x51E6;&#x7406;
+}())
+</code></pre><ul>
+<li>&#x4F7F;&#x3044;&#x65B9;&#x306F;&#x8272;&#x3005;&#x3042;&#x308B;&#x3093;&#x3067;&#x3059;&#x304C;&#x3001;&#x4E3B;&#x306B;&#x306F;&#x4EE5;&#x4E0B;&#x304B;&#x306A;&#x30FC;&#x3068;&#x3002;</li>
+</ul>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">// 1.&#x540D;&#x524D;&#x3092;&#x5F37;&#x5236;&#x3055;&#x305B;&#x308B;</span>
+<span class="hljs-comment">// &#x4F8B;&#x3048;&#x3070;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x306E;&#xFF08;window&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#xFF09;$&#x304C;</span>
+<span class="hljs-comment">// jQuery&#x3068;&#x4ED6;&#x306E;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3067;&#x30D0;&#x30C3;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x907F;&#x3051;&#x3089;&#x308C;&#x308B;</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$</span>) </span>{
+    <span class="hljs-comment">// &#x3053;&#x3053;&#x3067;&#x306E;$&#x306F;jQuery&#x3092;&#x6307;&#x3059;</span>
+    $(<span class="hljs-string">&apos;#target&apos;</span>).on(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-comment">// &#x4F55;&#x3089;&#x304B;&#x306E;&#x51E6;&#x7406;</span>
+    })
+})(jQuery)
+
+<span class="hljs-comment">// 2.&#x53C2;&#x7167;&#x4E0D;&#x53EF;&#x306A;&#x5909;&#x6570;&#x3092;&#x4F5C;&#x308C;&#x308B;</span>
+<span class="hljs-comment">// &#x5916;&#x304B;&#x3089;&#x306F;&#x5909;&#x6570; hoge &#x3068; count &#x306B;&#x306F;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3067;&#x304D;&#x306A;&#x3044;</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> hoge  = <span class="hljs-string">&apos;hoge&apos;</span>
+    <span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>
+
+    <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.info(++count);
+    }, <span class="hljs-literal">false</span>)
+})()
+<span class="hljs-comment">// &#x3053;&#x308C;&#x306F;jQuery&#x3092;&#x4F7F;&#x3046;&#x3068;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x3051;&#x308B;</span>
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> hoge  = <span class="hljs-string">&apos;hoge&apos;</span>
+    <span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>
+
+    $(<span class="hljs-built_in">document</span>).on(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.info(++count)
+    })
+})
+
+<span class="hljs-comment">// 3.&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x5224;&#x5B9A;</span>
+<span class="hljs-comment">// &#x30C7;&#x30D0;&#x30A4;&#x30B9;&#x5224;&#x5B9A;&#x306B;&#x3082;&#x5229;&#x7528;&#x53EF;</span>
+<span class="hljs-keyword">var</span> browser = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// &#x3082;&#x3061;&#x308D;&#x3093;&#x3053;&#x306E;&#x5B50;&#x306F;&#x5916;&#x304B;&#x3089;&#x306F;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3067;&#x304D;&#x306A;&#x3044;</span>
+   <span class="hljs-keyword">var</span> _ua = navigator.userAgent
+
+   <span class="hljs-keyword">if</span> (_ua.indexOf(<span class="hljs-string">&apos;Edge&apos;</span>) &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Edge&apos;</span>
+   <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (_ua.indexOf(<span class="hljs-string">&apos;Chrome&apos;</span>)  &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Google Chrome&apos;</span>
+   <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (_ua.indexOf(<span class="hljs-string">&apos;Safari&apos;</span>)  &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Safari&apos;</span>
+   <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (_ua.indexOf(<span class="hljs-string">&apos;Firefox&apos;</span>) &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Firefox&apos;</span>
+   <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (_ua.indexOf(<span class="hljs-string">&apos;.NET&apos;</span>)    &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Internet Explorer&apos;</span>
+})()
+</code></pre>
 
                                 
                                 </section>
@@ -358,12 +412,12 @@
 
             
                 
-                <a href="immediate.html" class="navigation navigation-prev " aria-label="Previous page: 即時関数">
+                <a href="define.html" class="navigation navigation-prev " aria-label="Previous page: 関数の定義">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../prototype.html" class="navigation navigation-next " aria-label="Next page: プロトタイプについて">
+                <a href="constructor.html" class="navigation navigation-next " aria-label="Next page: コンストラクタ">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -374,7 +428,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"コンストラクタ","level":"1.1.2.3","depth":3,"next":{"title":"プロトタイプについて","level":"1.1.3","depth":2,"path":"docs/prototype.md","ref":"docs/prototype.md","articles":[{"title":"インスタンスの生成","level":"1.1.3.1","depth":3,"path":"docs/prototype/new.md","ref":"docs/prototype/new.md","articles":[]},{"title":"プロトタイプ","level":"1.1.3.2","depth":3,"path":"docs/prototype/prototype.md","ref":"docs/prototype/prototype.md","articles":[]},{"title":"プロトタイプチェーン","level":"1.1.3.3","depth":3,"path":"docs/prototype/chain.md","ref":"docs/prototype/chain.md","articles":[]}]},"previous":{"title":"即時関数","level":"1.1.2.2","depth":3,"path":"docs/function/immediate.md","ref":"docs/function/immediate.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/function/constructor.md","mtime":"2017-04-18T08:11:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-20T09:42:43.886Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"即時関数","level":"1.1.2.2","depth":3,"next":{"title":"コンストラクタ","level":"1.1.2.3","depth":3,"path":"docs/function/constructor.md","ref":"docs/function/constructor.md","articles":[]},"previous":{"title":"関数の定義","level":"1.1.2.1","depth":3,"path":"docs/function/define.md","ref":"docs/function/define.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/function/immediate.md","mtime":"2017-04-20T09:42:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-20T09:42:43.886Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
