@@ -13,3 +13,4 @@
   * [call, applyメソッド](docs/call_apply.md)
 * [ES2015]()
   * [Arrow Function](docs/arrow_func.md)
+* [その他](docs/others.md)
