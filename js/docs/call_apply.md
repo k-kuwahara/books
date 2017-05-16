@@ -1,4 +1,4 @@
-# call, apply method
+# Call, Apply method
 
 ### ▼説明
 

@@ -1,6 +1,6 @@
 # Function
 
-## ▼概要
+## ▼説明
 
 JavaScriptでは、 __[関数](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Functions)は1つのオブジェクト__ になります。
 オブジェクトですので __変数に格納__ できますし、 __プロパティを関数に追加する__ こともできますし、__別の関数の引数に渡す__ ことも、__returnで返すこと__もできます。
