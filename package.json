@@ -1,8 +1,6 @@
 {
   "name": "books",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
   "scripts": {
     "init": "gitbook init",
     "start": "gitbook serve",
@@ -17,5 +15,14 @@
   },
   "dependencies": {
     "gh-pages": "^2.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/k-kuwahara/books.git"
+  },
+  "bugs": {
+    "url": "https://github.com/k-kuwahara/books/issues"
+  },
+  "homepage": "https://github.com/k-kuwahara/books#readme",
+  "description": ""
 }
