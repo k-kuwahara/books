@@ -73,7 +73,7 @@ function square(n) {
 ```JavaScript
 // 以下はエラーとなる
 console.log(square(5))
-const ssquare = (n) => n * n
+const square = (n) => n * n
 ```
 
 このように、JavaScriptの関数はオブジェクトですので、かなり自由に扱えます。逆にそれが難しくさせているのかもしれないですね…
