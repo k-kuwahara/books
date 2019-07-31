@@ -5,8 +5,8 @@
     "init": "gitbook init",
     "start:js": "gitbook serve js",
     "start:riot": "gitbook serve riot",
-    "build-js": "gitbook build js && rm -rf pages/js/ && cp -R js/_book/ pages/js/",
-    "build-riot": "gitbook build riot && rm -rf pages/riot/ && cp -R riot/_book/ pages/riot/",
+    "build:js": "gitbook build js && rm -rf pages/js/ && cp -R js/_book/ pages/js/",
+    "build:riot": "gitbook build riot && rm -rf pages/riot/ && cp -R riot/_book/ pages/riot/",
     "publish": "gh-pages -d pages -m 'auto publish'"
   },
   "author": "k-kuwahara",
