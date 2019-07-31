@@ -7,7 +7,7 @@
 まずは構文を見てみましょう。
 
 ```javascript
-var promise = new Promise(function(resolve, reject) {
+const promise = new Promise((resolve, reject) => {
 	// resolve: 成功した時
 	// reject : 失敗した時
 })
@@ -28,9 +28,17 @@ var promise = new Promise(function(resolve, reject) {
 
 ```javascript
 
-var promise = new Promise(function(resolve, reject) {
-
+const promise = new Promise((resolve, reject) => {
+   // 何かしらの処理
 })
+
+promise
+   .then((val) => {
+      // 正常時の処理
+   })
+   .catch((err) => {
+      // エラー時の処理
+   })
 ```
 
 さらに、`Promise`コンストラクタのメソッドも見てみましょう。以下のメソッドの引数`tasks`は、プロミスの配列を表します。
