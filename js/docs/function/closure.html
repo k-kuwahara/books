@@ -373,31 +373,29 @@
 <h4 id="&#x300C;&#x81EA;&#x5206;&#x3092;&#x56F2;&#x3080;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x3042;&#x308B;&#x5909;&#x6570;&#x3092;&#x53C2;&#x7167;&#x3067;&#x304D;&#x308B;&#x95A2;&#x6570;&#x300D;">&#x300C;&#x81EA;&#x5206;&#x3092;&#x56F2;&#x3080;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306B;&#x3042;&#x308B;&#x5909;&#x6570;&#x3092;&#x53C2;&#x7167;&#x3067;&#x304D;&#x308B;&#x95A2;&#x6570;&#x300D;</h4>
 <p>&#x3068;&#x8868;&#x73FE;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;&#x8AA4;&#x89E3;&#x3092;&#x6050;&#x308C;&#x305A;&#x8A00;&#x3046;&#x3068;&#x3001;&#x5168;&#x3066;&#x306E;&#x95A2;&#x6570;&#x306F;&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;&#x3068;&#x3082;&#x8A00;&#x3048;&#x307E;&#x3059;&#x3002;&#xFF08;&#x3082;&#x3061;&#x308D;&#x3093;&#x4F8B;&#x5916;&#x3042;&#x308A;&#xFF09;
 &#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306E;&#x7406;&#x89E3;&#x3082;&#x5FC5;&#x8981;&#x3067;&#x3059;&#x304C;&#x3001;&#x4E00;&#x65E6;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x898B;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<pre><code class="lang-JavaScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">var</span> value = <span class="hljs-number">1</span>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> func = () =&gt; {
+  <span class="hljs-keyword">const</span> value = <span class="hljs-number">1</span>
 
   <span class="hljs-comment">// &#x3053;&#x306E;&#x5B50;&#x304C;&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;</span>
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">innerFunc</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> innerFunc = () =&gt; {
     <span class="hljs-built_in">console</span>.log(value)
   }
   innerFunc()
 }
 func() <span class="hljs-comment">// =&gt; 1</span>
 </code></pre>
-<p>JavaScript&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306E;&#x4ED5;&#x69D8;&#x304B;&#x3089;&#x3001;&#x4E0A;&#x8A18;&#x30B3;&#x30FC;&#x30C9;&#x306E;<code>innerFunc</code> &#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x5185;&#x304B;&#x3089;&#x5916;&#x306B;&#x3044;&#x308B; <code>value</code> &#x3068;&#x3044;&#x3046;&#x5909;&#x6570;&#x304C;&#x53C2;&#x7167;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#xFF08;&#x30B3;&#x30D4;&#x30FC;&#x3067;&#x306F;&#x306A;&#x3044;&#x70B9;&#x304C;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3067;&#x3059;&#xFF09;</p>
+<p>JavaScript &#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306E;&#x4ED5;&#x69D8;&#x304B;&#x3089;&#x3001;&#x4E0A;&#x8A18;&#x30B3;&#x30FC;&#x30C9;&#x306E; <code>innerFunc</code> &#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x5185;&#x304B;&#x3089;&#x5916;&#x306B;&#x3044;&#x308B; <code>value</code> &#x3068;&#x3044;&#x3046;&#x5909;&#x6570;&#x304C;&#x53C2;&#x7167;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#xFF08;&#x30B3;&#x30D4;&#x30FC;&#x3067;&#x306F;&#x306A;&#x3044;&#x70B9;&#x304C;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3067;&#x3059;&#xFF09;</p>
 <p>&#x3061;&#x3087;&#x3063;&#x3068;&#x5FDC;&#x7528;&#x3057;&#x305F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<pre><code class="lang-JavaScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">var</span> value = <span class="hljs-number">0</span>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> func = () =&gt; {
+  <span class="hljs-keyword">let</span> value = <span class="hljs-number">0</span>
 
   <span class="hljs-comment">// &#x3053;&#x306E;&#x7121;&#x540D;&#x95A2;&#x6570;&#x304C;&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;</span>
   <span class="hljs-comment">// return&#x3067;&#x95A2;&#x6570;&#x305D;&#x306E;&#x3082;&#x306E;&#x3092;&#x8FD4;&#x3059;</span>
-  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">return</span> ++value
-  }
+  <span class="hljs-keyword">return</span> () =&gt;  ++value
 }
 
 <span class="hljs-comment">// &#x3053;&#x306E;call&#x306F;&#x95A2;&#x6570;&#x3078;&#x306E;&#x30EA;&#x30D5;&#x30A1;&#x30EC;&#x30F3;&#x30B9;&#x3068;&#x306A;&#x308B;</span>
-<span class="hljs-keyword">var</span> call = func()
+<span class="hljs-keyword">const</span> call = func()
 
 <span class="hljs-built_in">console</span>.info(call())   <span class="hljs-comment">// =&gt; 1</span>
 <span class="hljs-built_in">console</span>.info(call())   <span class="hljs-comment">// =&gt; 2</span>
@@ -406,8 +404,8 @@ func() <span class="hljs-comment">// =&gt; 1</span>
 
 <span class="hljs-comment">// console.log(value) &#x2190;&#x3082;&#x3061;&#x308D;&#x3093;&#x3053;&#x308C;&#x306F;&#x30A8;&#x30E9;&#x30FC;&#x306B;&#x306A;&#x308B;</span>
 </code></pre>
-<p><code>func()</code>&#x306F;&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;&#x3067;&#x306F;&#x306A;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;<strong>return&#x3055;&#x308C;&#x308B;&#x5B50;&#x306F;&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;</strong>&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;&#x3053;&#x306E;&#x5B50;&#x306F;&#x5909;&#x6570;<code>value</code>&#x3092;&#x53C2;&#x7167;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
-&#x3057;&#x305F;&#x304C;&#x3063;&#x3066;&#x3001;<code>call()</code>&#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x5EA6;&#x306B;<code>value</code>&#x306E;&#x5024;&#x304C;&#x30A4;&#x30F3;&#x30AF;&#x30EA;&#x30E1;&#x30F3;&#x30C8;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<p><code>func()</code> &#x306F;&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;&#x3067;&#x306F;&#x306A;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;<strong><code>return</code> &#x3055;&#x308C;&#x308B;&#x5B50;&#x306F;&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;</strong>&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;&#x3053;&#x306E;&#x5B50;&#x306F;&#x5909;&#x6570;<code>value</code>&#x3092;&#x53C2;&#x7167;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
+&#x3057;&#x305F;&#x304C;&#x3063;&#x3066;&#x3001;<code>call()</code> &#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x5EA6;&#x306B; <code>value</code> &#x306E;&#x5024;&#x304C;&#x30A4;&#x30F3;&#x30AF;&#x30EA;&#x30E1;&#x30F3;&#x30C8;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
 
                                 
                                 </section>
@@ -451,7 +449,7 @@ func() <span class="hljs-comment">// =&gt; 1</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"クロージャ","level":"1.1.2.3","depth":3,"next":{"title":"コンストラクタ","level":"1.1.2.4","depth":3,"path":"docs/function/constructor.md","ref":"docs/function/constructor.md","articles":[]},"previous":{"title":"即時関数","level":"1.1.2.2","depth":3,"path":"docs/function/immediate.md","ref":"docs/function/immediate.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/function/closure.md","mtime":"2019-07-31T04:28:35.895Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-04T08:46:23.293Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"クロージャ","level":"1.1.2.3","depth":3,"next":{"title":"コンストラクタ","level":"1.1.2.4","depth":3,"path":"docs/function/constructor.md","ref":"docs/function/constructor.md","articles":[]},"previous":{"title":"即時関数","level":"1.1.2.2","depth":3,"path":"docs/function/immediate.md","ref":"docs/function/immediate.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/function/closure.md","mtime":"2019-08-04T09:59:04.253Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-04T10:08:14.861Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
