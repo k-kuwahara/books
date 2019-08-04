@@ -3,13 +3,14 @@
 ## ▼説明
 関数を定義したその場で実行する関数です。実行後は捨てられます。
 
-```
+```js
 // 要はこんな子です
-(function() {
-    //何かしらの処理
+(() => {
+    // 何かしらの処理
 })()
 
-// ()を中に入れる書き方もあります
+// function で定義する場合は、()を中に入れる書き方もあります
+// ※ES6 のアロー関数ではエラーになります
 (function() {
     // 何かしらの処理
 }())
@@ -19,12 +20,12 @@
 
 ### 名前を強制させる
 
-```JavaScript
+```js
 // 例えばグローバルの（windowオブジェクトの）$が
 // jQueryと他のライブラリでバッティングすることを避けられる
-(function($) {
+(($) => {
     // ここでの$はjQueryを指す
-    $('#target').on('click', function() {
+    $('#target').on('click', () => {
         // 何らかの処理
     })
 })(jQuery)
@@ -32,78 +33,78 @@
 
 ### プライベートな変数、オブジェクトを生成
 
-```JavaScript
-// 外からは変数 hoge と count にはアクセスできない
-(function() {
-    var hoge  = 'hoge'
-    var count = 0
+```js
+// 外からは変数 _hoge と _count にはアクセスできない
+(() => {
+    const _hoge  = 'hoge'
+    let _count = 0
 
-    document.addEventListener('click', function() {
-        console.info(++count);
+    document.addEventListener('click', () => {
+        console.info(++_count);
     }, false)
 })()
 
 // 上記をjQueryを利用して書くとこうなる
-$(function() {
-    var hoge  = 'hoge'
-    var count = 0
+$(() => {
+    const _hoge  = 'hoge'
+    let _count = 0
 
-    $(document).on('click', function() {
-        console.info(++count)
+    $(document).on('click', () => {
+        console.info(++_count)
     })
 })
 ```
 
 ### インスタンスを生成
 
-```JavaScript
+```js
 // パターン1
 // いわゆるシングルトンパターン
-var app = (function() {
-   var _hoge,
-       _fuga
+const app = (() => {
+   const _hoge,
+         _fuga
 
-   function foo() {
+   const foo = () => {
       // 〜
    }
-   function bar() {
+   const bar = () => {
       // 〜
    }
-   $('#hoge').click(function() {
+   $('#hoge').click(() => {
       alert('hoge')
    })
 
-   refutn {
+   return {
       hoge: this._hoge
       fuga: this._fuga
-      aaa: function() {
+      aaa: (val) => {
          // 〜
       },
-      bbb: function() {
+      bbb: (val) => {
          // 〜
       }
    }
 })()
 
 // パターン2
-var classHoge = (function() {
-    function classHoge(a, b) {
-       this.hoge = a
-       this.fuga = b
-       this.init()
-    }
-    classHoge.prototype = {
-      init: function() {
+const classHoge = (() => {
+   const classHoge = (a, b) => {
+      this.hoge = a
+      this.fuga = b
+      this.init()
+   }
+   classHoge.prototype = {
+      init: () => {
          this.buttonBack(),
          this.buttonNext()
       },
-      buttonBack: function() {
-         $('#btn-back').on('click', function() {
+      buttonBack: () => {
+         $('#btn-back').on('click', () => {
             alert('back')
          })
       },
       buttonNext: function() {
-         $('#btn-next').on('click', function() {
+         $('#btn-next').on('click', () => {
             alert('next')
          })
       }
@@ -111,16 +112,16 @@ var classHoge = (function() {
    return classHoge
 })()
 // htmlのscriptタグで
-var foo = new classHoge('hoge', 123)
+const hoge = new classHoge('hoge', 123)
 ```
 
 ### ブラウザ判定
 
-```JavaScript
+```js
 // デバイス判定にも利用可
-var browser = (function() {
+const browser = (() => {
     // もちろんこの子は外からはアクセスできない
-   var _ua = navigator.userAgent
+   const _ua = navigator.userAgent
 
    if (_ua.indexOf('Edge') > 0) return 'Edge'
    else if (_ua.indexOf('Chrome')  > 0) return 'Google Chrome'
