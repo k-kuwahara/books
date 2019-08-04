@@ -23,6 +23,9 @@ const hoge = (() => {
       return 'fuga'
    }
 })()
+// ※上記の関数は以下のように省略できる
+const hoge = (() => () => 'fuga')()
+
 hoge() // => "fuga"
 ```
 
