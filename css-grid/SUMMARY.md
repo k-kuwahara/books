@@ -2,11 +2,7 @@
 
 - [はじめに](README.md)
   - [準備](docs/preparation.md)
-  - [関数](docs/function.md)
-    - [関数の定義](docs/function/define.md)
-    - [即時関数](docs/function/immediate.md)
-    - [クロージャ](docs/function/closure.md)
-    - [コンストラクタ](docs/function/constructor.md)
+  - [基本](docs/basic.md)
   - [プロトタイプ](docs/prototype.md)
     - [インスタンスの生成](docs/prototype/new.md)
     - [プロトタイプ](docs/prototype/prototype.md)
