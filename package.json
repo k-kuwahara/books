@@ -7,7 +7,7 @@
     "start:grid": "gitbook serve css-grid",
     "start:riot": "gitbook serve riot",
     "build:js": "gitbook build js && rm -rf pages/js/ && cp -R js/_book/ pages/js/",
-    "build:css-grid": "gitbook build css-grid && rm -rf pages/css-grid/ && cp -R css-grid/_book/ pages/css-grid/",
+    "build:grid": "gitbook build css-grid && rm -rf pages/css-grid/ && cp -R css-grid/_book/ pages/css-grid/",
     "build:riot": "gitbook build riot && rm -rf pages/riot/ && cp -R riot/_book/ pages/riot/",
     "publish": "gh-pages -d pages -m 'auto publish'"
   },
