@@ -1,4 +1,5 @@
 ## links my books
 
-- [js](https://k-kuwahara.github.io/books/js/)
-- [riot](https://k-kuwahara.github.io/books/riot/)
+- [js](https://kkeeth.github.io/books/js/)
+- [css grid](https://kkeeth.github.io/books/css-grid/)
+- [riot](https://kkeeth.github.io/books/riot/)

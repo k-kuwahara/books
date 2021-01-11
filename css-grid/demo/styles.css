@@ -6,8 +6,11 @@ body {
 .container {
   display: grid;
 
-  grid-template-columns: 2fr 100px 1fr;
-  grid-template-rows: 100px 100px;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-flow: column dense;
+  grid-auto-columns: 100px;
+  gap: 10px;
 }
 
 .box {
@@ -24,10 +27,16 @@ body {
 .item2 {
   background: #3d92a4;
   color: #fff;
+
+  grid-row: span 2;
+  grid-column: span 2;
 }
 
 .item3 {
   background: #f1907e;
+
+  grid-row: span 2;
+  grid-column: span 2;
 }
 
 .item4 {

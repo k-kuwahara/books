@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>プロトタイプ · GitBook</title>
+        <title>繰り返し生成 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="prototype/new.html" />
+    <link rel="next" href="minmax_auto_fit.html" />
     
     
-    <link rel="prev" href="basic.html" />
+    <link rel="prev" href="gap.html" />
     
 
     </head>
@@ -129,26 +129,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.3" data-path="prototype.html">
+        <li class="chapter " data-level="1.1.3" data-path="gap.html">
             
-                <a href="prototype.html">
-            
-                    
-                    プロトタイプ
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.1.3.1" data-path="prototype/new.html">
-            
-                <a href="prototype/new.html">
+                <a href="gap.html">
             
                     
-                    インスタンスの生成
+                    余白
             
                 </a>
             
@@ -156,12 +142,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.3.2" data-path="prototype/prototype.html">
+        <li class="chapter active" data-level="1.1.4" data-path="repeat.html">
             
-                <a href="prototype/prototype.html">
+                <a href="repeat.html">
             
                     
-                    プロトタイプ
+                    繰り返し生成
             
                 </a>
             
@@ -169,12 +155,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.3.3" data-path="prototype/chain.html">
+        <li class="chapter " data-level="1.1.5" data-path="minmax_auto_fit.html">
             
-                <a href="prototype/chain.html">
+                <a href="minmax_auto_fit.html">
             
                     
-                    プロトタイプチェーン
+                    サイズの範囲指定と余白の均等化
             
                 </a>
             
@@ -182,17 +168,12 @@
             
         </li>
     
-
-            </ul>
+        <li class="chapter " data-level="1.1.6" data-path="auto_rows.html">
             
-        </li>
-    
-        <li class="chapter " data-level="1.1.4" data-path="call_apply.html">
-            
-                <a href="call_apply.html">
+                <a href="auto_rows.html">
             
                     
-                    call, apply メソッド
+                    はみ出した行の縦幅
             
                 </a>
             
@@ -200,12 +181,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.5" data-path="promise.html">
+        <li class="chapter " data-level="1.1.7" data-path="grid_line.html">
             
-                <a href="promise.html">
+                <a href="grid_line.html">
             
                     
-                    プロミス
+                    グリッドラインを使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="flow_size_change.html">
+            
+                <a href="flow_size_change.html">
+            
+                    
+                    向きとサイズを変更
             
                 </a>
             
@@ -215,51 +209,6 @@
     
 
             </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" >
-            
-                <span>
-            
-                    
-                    ES2015
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.2.1" data-path="arrow_func.html">
-            
-                <a href="arrow_func.html">
-            
-                    
-                    Arrow Function
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="others.html">
-            
-                <a href="others.html">
-            
-                    
-                    その他
-            
-                </a>
-            
-
             
         </li>
     
@@ -293,7 +242,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >プロトタイプ</a>
+        <a href=".." >繰り返し生成</a>
     </h1>
 </div>
 
@@ -308,12 +257,47 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="prototype">prototype</h1>
-<p>JavaScript &#x306F;<strong>&#x300C;<code>prototype</code> &#x30D9;&#x30FC;&#x30B9;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x6307;&#x5411;&#x8A00;&#x8A9E;&#x300D;</strong>&#x3068;&#x8A00;&#x308F;&#x308C;&#x308B;&#x8A00;&#x8A9E;&#x3067;&#x3059;&#x3002;
-&#x3069;&#x3046;&#x3044;&#x3046;&#x3053;&#x3068;&#x304B;&#x3068;&#x8A00;&#x3046;&#x3068;&#x3001;JavaScript&#x306B;&#x306F;<code>&#x30AF;&#x30E9;&#x30B9;&#x69CB;&#x6587;</code>&#x304C;&#x5B58;&#x5728;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;&#xFF08;&#x203B;<code>ES2015</code>&#x304B;&#x3089;&#x306F;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;&#x3053;&#x308C;&#x306F;&#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x306E;&#x7CD6;&#x8863;&#x69CB;&#x6587;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#xFF09;</p>
-<p>&#x3057;&#x304B;&#x3057;&#x3001;JavaScript &#x306B;&#x306F;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x306E;&#x50CD;&#x304D;&#x3092;&#x3059;&#x308B;&#x7D44;&#x307F;&#x8FBC;&#x307F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#xFF08;&#x5B9F;&#x614B;&#x306F;&#x95A2;&#x6570;&#xFF09;&#x304C;&#x5B58;&#x5728;&#x3057;&#x3001;&#x3053;&#x306E;&#x95A2;&#x6570;&#x3092; <code>new</code> &#x3057;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x751F;&#x6210;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
-&#x3053;&#x306E;&#x6642;&#x91CD;&#x8981;&#x306B;&#x306A;&#x3063;&#x3066;&#x304F;&#x308B;&#x306E;&#x304C;&#x3001;<code>prototype</code> &#x3068;&#x3044;&#x3046;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3067;&#x306F;&#x3001;&#x8A73;&#x3057;&#x304F;&#x898B;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+                                <h1 id="&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x751F;&#x6210;">&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x751F;&#x6210;</h1>
+<p>&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x306E;&#x500B;&#x6570;&#x304C; 100 &#x500B;&#x3068;&#x304B;&#x6570;&#x304C;&#x5897;&#x3048;&#x305F;&#x5834;&#x5408;&#xFF0C;&#x3044;&#x3061;&#x3044;&#x3061;&#x624B;&#x3067;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x306E;&#x306F;&#x9762;&#x5012;&#x306A;&#x306E;&#x3067;&#x52D5;&#x7684;&#x306B;&#x4F55;&#x500B;&#x914D;&#x7F6E;&#x3059;&#x308B;&#x304B;&#x3092; <code>repeat()</code> &#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x3092;&#x7528;&#x3044;&#x3066;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x6307;&#x5B9A;&#x3067;&#x304D;&#x308B;&#xFF0E;</p>
+<p><strong>styles.css</strong></p>
+<pre><code class="lang-diff">.container {
+  display: grid;
+
+  grid-template-rows: 100px 100px;
+<span class="hljs-deletion">- grid-template-columns: 100px 100px 100px;</span>
+<span class="hljs-addition">+ grid-template-columns: repeat(4, 100px);</span>
+  gap: 10px;
+}
+</code></pre>
+<p>&#x4ECA;&#x56DE;&#x306F;&#xFF14;&#x5217;&#x3067;&#x5E45;&#x3092; 100px &#x306B;&#x306A;&#x308B;&#x3088;&#x3046;&#x306B;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x308B;&#xFF0E;</p>
+<p>&#x307E;&#x305F;&#xFF0C;<code>100px</code> &#x3092; <code>1fr</code> &#x306B;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3068;&#x753B;&#x9762;&#x5E45;&#x306B;&#x5408;&#x3046;&#x3088;&#x3046;&#x306B;&#x6A2A;&#x5E45;&#x304C;&#x4F38;&#x3073;&#x308B;&#xFF0E;</p>
+<p><strong>styles.css</strong></p>
+<pre><code class="lang-diff">.container {
+  display: grid;
+
+  grid-template-rows: 100px 100px;
+<span class="hljs-deletion">- grid-template-columns: repeat(4, 100px);</span>
+<span class="hljs-addition">+ grid-template-columns: repeat(4, 1fr);</span>
+  gap: 10px;
+}
+</code></pre>
+<p>&#x3055;&#x3089;&#x306B;&#xFF0C;&#x753B;&#x9762;&#x5E45;&#x306B;&#x5FDC;&#x3058;&#x3066;&#x6A2A;&#x306B;&#x4E26;&#x3079;&#x308B;&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x306E;&#x6570;&#x3092;&#x52D5;&#x7684;&#x306B;&#x5909;&#x66F4;&#x3055;&#x305B;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F; <code>auto-fill</code> &#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#xFF0E;&#x3053;&#x3053;&#x3067;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3055;&#x306E;&#x305F;&#x3081;&#xFF0C;&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x3092;&#xFF11;&#x3064;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304A;&#x304F;&#xFF0E;</p>
+<p><strong>index.html</strong></p>
+<pre><code class="lang-diff">    &lt;div class=&quot;box item4&quot;&gt;item4&lt;/div&gt;
+    &lt;div class=&quot;box item5&quot;&gt;item5&lt;/div&gt;
+<span class="hljs-addition">+   &lt;div class=&quot;box item5&quot;&gt;item6&lt;/div&gt;</span>
+  &lt;/div&gt;
+</code></pre>
+<p><strong>styles.css</strong></p>
+<pre><code class="lang-diff">.container {
+  display: grid;
+
+  grid-template-rows: 100px 100px;
+<span class="hljs-deletion">- grid-template-columns: repeat(4, 100px);</span>
+<span class="hljs-addition">+ grid-template-columns: repeat(auto-fill, 100px);</span>
+  gap: 10px;
+}
+</code></pre>
 
                                 
                                 </section>
@@ -341,12 +325,12 @@
 
             
                 
-                <a href="basic.html" class="navigation navigation-prev " aria-label="Previous page: 基本">
+                <a href="gap.html" class="navigation navigation-prev " aria-label="Previous page: 余白">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="prototype/new.html" class="navigation navigation-next " aria-label="Next page: インスタンスの生成">
+                <a href="minmax_auto_fit.html" class="navigation navigation-next " aria-label="Next page: サイズの範囲指定と余白の均等化">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -357,7 +341,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"プロトタイプ","level":"1.1.3","depth":2,"next":{"title":"インスタンスの生成","level":"1.1.3.1","depth":3,"path":"docs/prototype/new.md","ref":"docs/prototype/new.md","articles":[]},"previous":{"title":"基本","level":"1.1.2","depth":2,"path":"docs/basic.md","ref":"docs/basic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/prototype.md","mtime":"2021-01-11T09:39:22.836Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-11T10:23:46.548Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"繰り返し生成","level":"1.1.4","depth":2,"next":{"title":"サイズの範囲指定と余白の均等化","level":"1.1.5","depth":2,"path":"docs/minmax_auto_fit.md","ref":"docs/minmax_auto_fit.md","articles":[]},"previous":{"title":"余白","level":"1.1.3","depth":2,"path":"docs/gap.md","ref":"docs/gap.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/repeat.md","mtime":"2021-01-11T11:08:32.747Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-11T14:40:49.906Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
