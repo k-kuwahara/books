@@ -1,8 +1,8 @@
 # 基本
 
-## ▼ ３行２列のグリッドレイアウトを作成
+## ▼ ２行３列のグリッドレイアウトを作成
 
-グリッドレイアウトのキホンのキということで，３行２列のレイアウトを作成する．
+グリッドレイアウトのキホンのキということで，２行３列のレイアウトを作成する．
 
 **styles.css**
 
@@ -10,21 +10,23 @@
 .container {
   display: grid;
 
-+ grid-template-columns: 100px 100px;
-+ grid-template-rows: 100px 100px 100px;
++ grid-template-rows: 100px 100px;
++ grid-template-columns: 100px 100px 100px;
 }
 ```
 
-上記のように `columns, rows` で行と列の数を指定する．逆に２行３列にする場合は以下となる．
+上記のように `columns, rows` で行と列の数を指定する．**次回以降のページも，ベースはこの指定とする．**
+
+逆に３行２列にする場合は以下となる．
 
 ```diff
 .container {
   display: grid;
 
-- grid-template-columns: 100px 100px;
-- grid-template-rows: 100px 100px 100px;
-+ grid-template-columns: 100px 100px 100px;
-+ grid-template-rows: 100px 100px;
+- grid-template-rows: 100px 100px;
+- grid-template-columns: 100px 100px 100px;
++ grid-template-rows: 100px 100px 100px;
++ grid-template-columns: 100px 100px;
 }
 ```
 
@@ -38,8 +40,8 @@
 .container {
   display: grid;
 
-+ grid-template-columns: 1fr　100px 100px;
 + grid-template-rows: 100px 100px;
++ grid-template-columns: 1fr　100px 100px;
 }
 ```
 
@@ -51,8 +53,8 @@
 .container {
   display: grid;
 
+  grid-template-rows: 100px 100px;
 - grid-template-columns: 1fr　100px 100px;
 + grid-template-columns: 2fr　100px 1fr;
-  grid-template-rows: 100px 100px;
 }
 ```

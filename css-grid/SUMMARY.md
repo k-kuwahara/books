@@ -4,7 +4,7 @@
   - [準備](docs/preparation.md)
   - [基本](docs/basic.md)
   - [余白](docs/gap.md)
-    - [インスタンスの生成](docs/prototype/new.md)
+  - [動的にボックスを配置](docs/repeat.md)
     - [プロトタイプ](docs/prototype/prototype.md)
     - [プロトタイプチェーン](docs/prototype/chain.md)
   - [call, apply メソッド](docs/call_apply.md)
