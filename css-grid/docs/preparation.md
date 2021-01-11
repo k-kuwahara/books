@@ -14,11 +14,11 @@
   </head>
   <body>
     <div class="container">
-      <div class="item1">item1</div>
-      <div class="item2">item2</div>
-      <div class="item3">item3</div>
-      <div class="item4">item4</div>
-      <div class="item5">item5</div>
+      <div class="box item1">item1</div>
+      <div class="box item2">item2</div>
+      <div class="box item3">item3</div>
+      <div class="box item4">item4</div>
+      <div class="box item5">item5</div>
     </div>
   </body>
 </html>
@@ -34,6 +34,12 @@ body {
 
 .container {
   display: grid;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item1 {

@@ -5,6 +5,15 @@ body {
 
 .container {
   display: grid;
+
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item1 {
