@@ -1,12 +1,10 @@
-# JavaScriptに関する個人まとめ
+# CSS Grid に関する個人的まとめ
 
-JavaScriptって以下のようなことを理解すればある程度いけると個人的には思っているので、
-それを書き連ねていきます。
+CSS Grid に関する勉強のメモ
 
-* スコープ
-* 各種関数
-* this
-* シングルスレッド
-* タイマーが保証されないこと
-* `prototype`
-* `apply, call`メソッド
+- 準備
+- grid
+- grid-template-columns
+- grid-template-rows
+- fr(action)
+-
