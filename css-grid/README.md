@@ -19,3 +19,5 @@ CSS Grid に関する勉強のメモ
 - grid-auto-flow
 - grid-auto-column
 - dense
+- grid-template-areas
+- grid-area
