@@ -16,3 +16,6 @@ CSS Grid に関する勉強のメモ
 - grid-column
 - grid-row
 - 範囲の指定
+- grid-auto-flow
+- grid-auto-column
+- dense
