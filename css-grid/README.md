@@ -7,4 +7,6 @@ CSS Grid に関する勉強のメモ
 - grid-template-columns
 - grid-template-rows
 - fr(action)
--
+- gap
+- repeat()
+- auto-fill

@@ -3,7 +3,7 @@
 - [はじめに](README.md)
   - [準備](docs/preparation.md)
   - [基本](docs/basic.md)
-  - [プロトタイプ](docs/prototype.md)
+  - [余白](docs/gap.md)
     - [インスタンスの生成](docs/prototype/new.md)
     - [プロトタイプ](docs/prototype/prototype.md)
     - [プロトタイプチェーン](docs/prototype/chain.md)
