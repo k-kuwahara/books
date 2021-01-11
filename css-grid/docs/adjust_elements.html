@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>サイズの範囲指定と余白の均等化 · GitBook</title>
+        <title>要素を揃えるプロパティ · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="auto_rows.html" />
     
-    
-    <link rel="prev" href="repeat.html" />
+    <link rel="prev" href="grid_area.html" />
     
 
     </head>
@@ -155,7 +153,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.5" data-path="minmax_auto_fit.html">
+        <li class="chapter " data-level="1.1.5" data-path="minmax_auto_fit.html">
             
                 <a href="minmax_auto_fit.html">
             
@@ -220,7 +218,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.10" data-path="adjust_elements.html">
+        <li class="chapter active" data-level="1.1.10" data-path="adjust_elements.html">
             
                 <a href="adjust_elements.html">
             
@@ -268,7 +266,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >サイズの範囲指定と余白の均等化</a>
+        <a href=".." >要素を揃えるプロパティ</a>
     </h1>
 </div>
 
@@ -283,42 +281,90 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x30B5;&#x30A4;&#x30BA;&#x306E;&#x7BC4;&#x56F2;&#x6307;&#x5B9A;&#x3068;&#x4F59;&#x767D;&#x306E;&#x5747;&#x7B49;&#x5316;">&#x30B5;&#x30A4;&#x30BA;&#x306E;&#x7BC4;&#x56F2;&#x6307;&#x5B9A;&#x3068;&#x4F59;&#x767D;&#x306E;&#x5747;&#x7B49;&#x5316;</h1>
-<p><a href="repeat.html">&#x524D;&#x56DE;</a> &#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x305D;&#x306E;&#x307E;&#x307E;&#x4F7F;&#x3046;&#xFF0E;</p>
-<p><strong>styles.css</strong></p>
-<pre><code class="lang-css"><span class="hljs-selector-class">.container</span> {
-  <span class="hljs-attribute">display</span>: grid;
-
-  <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
-  <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(auto-fill, 100px);
-  <span class="hljs-attribute">gap</span>: <span class="hljs-number">10px</span>;
-}
-</code></pre>
-<h2 id="&#x25BC;-&#x53F3;&#x7AEF;&#x306E;&#x4F59;&#x767D;&#x3092;&#x306A;&#x304F;&#x3059;">&#x25BC; &#x53F3;&#x7AEF;&#x306E;&#x4F59;&#x767D;&#x3092;&#x306A;&#x304F;&#x3059;</h2>
-<p>&#x524D;&#x56DE;&#x307E;&#x3067;&#x3067;&#x753B;&#x9762;&#x5E45;&#x306B;&#x306F;&#x307F;&#x51FA;&#x3057;&#x305F;&#x5834;&#x5408;&#x306F;&#x81EA;&#x52D5;&#x7684;&#x306B;&#x6539;&#x884C;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x305F;&#x304C;&#xFF0C;&#x53F3;&#x7AEF;&#x306B;&#x5FAE;&#x5999;&#x306B;&#x4F59;&#x767D;&#x304C;&#x7A7A;&#x3044;&#x3066;&#x3057;&#x307E;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#xFF0C;&#x305D;&#x306E;&#x5834;&#x5408;&#x306F;&#x5404;&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x306E;&#x6A2A;&#x5E45;&#x3092; <code>1fr</code> &#x306B;&#x3057;&#x3066;&#x5E45;&#x3044;&#x3063;&#x3071;&#x3044;&#x306B;&#x57CB;&#x3081;&#xFF0C;&#x3074;&#x3063;&#x305F;&#x308A;&#x53CE;&#x307E;&#x308B;&#x5834;&#x5408;&#x306F; <code>100px</code> &#x3068;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x5909;&#x66F4;&#xFF0E;</p>
-<p><strong>styles.css</strong></p>
-<pre><code class="lang-diff">.container {
-  display: grid;
-
-  grid-template-rows: 100px 100px;
-<span class="hljs-deletion">- grid-template-columns: repeat(auto-fill, 100px);</span>
-<span class="hljs-addition">+ grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));</span>
-  gap: 10px;
-}
-</code></pre>
-<p>&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x753B;&#x9762;&#x306E;&#x5E45;&#x3092;&#x4F38;&#x7E2E;&#x3057;&#x3066;&#x307F;&#x308B;&#x3068;&#xFF0C;&#x4F55;&#x3092;&#x3084;&#x3063;&#x3066;&#x3044;&#x308B;&#x304B;&#x5206;&#x304B;&#x308B;&#x3068;&#x601D;&#x3046;&#xFF0E;</p>
-<p>&#x305F;&#x3060;&#x3057;&#xFF0C;&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x3082;&#xFF16;&#x500B;&#x306E;&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x304C;&#x3059;&#x3079;&#x3066;&#x4E00;&#x884C;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3082;&#x753B;&#x9762;&#x5E45;&#x3092;&#x5927;&#x304D;&#x304F;&#x3059;&#x308B;&#x3068;&#x53F3;&#x7AEF;&#x306B;&#x307E;&#x3060;&#x4F59;&#x767D;&#x304C;&#x3067;&#x304D;&#x3066;&#x3057;&#x307E;&#x3046;&#x306E;&#x3067;&#xFF0C;&#x3053;&#x308C;&#x3092;&#x57CB;&#x3081;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F; <code>auto-fit</code> &#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#xFF0E;</p>
+                                <h1 id="&#x8981;&#x7D20;&#x3092;&#x63C3;&#x3048;&#x308B;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;">&#x8981;&#x7D20;&#x3092;&#x63C3;&#x3048;&#x308B;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;</h1>
+<p><code>flexbox</code> &#x3068;&#x540C;&#x69D8;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x304C;&#x6307;&#x5B9A;&#x3067;&#x304D;&#x308B;&#xFF08;&#x610F;&#x5473;&#x5408;&#x3044;&#x3082;&#x540C;&#x3058;&#xFF09;&#xFF0E;</p>
+<ul>
+<li><p>&#x5916;&#x5074;</p>
+<ul>
+<li><code>justify-content</code></li>
+<li><code>align-content</code></li>
+</ul>
+</li>
+<li><p>&#x4E2D;&#x8EAB;</p>
+<ul>
+<li><code>justify-items</code></li>
+<li><code>align-items</code></li>
+</ul>
+</li>
+<li><p>&#x500B;&#x5225;&#x306E;&#x4E2D;&#x8EAB;</p>
+<ul>
+<li><code>justify-self</code></li>
+<li><code>align-self</code></li>
+</ul>
+</li>
+</ul>
+<p>&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3055;&#x306E;&#x305F;&#x3081;&#xFF0C;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x5909;&#x66F4;&#x3059;&#x308B;&#xFF0E;</p>
 <p><strong>styles.css</strong></p>
 <pre><code class="lang-diff">.container {
   display: grid;
 
-  grid-template-rows: 100px 100px;
-<span class="hljs-deletion">- grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));</span>
-<span class="hljs-addition">+ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));</span>
+<span class="hljs-deletion">- grid-template-rows: 100px 100px;</span>
+<span class="hljs-deletion">- grid-template-columns: 100px 100px 100px;</span>
+<span class="hljs-addition">+ grid-template-rows: repeat(2, 100px);</span>
+<span class="hljs-addition">+ grid-template-columns: repeat(3, 100px);</span>
   gap: 10px;
+
+<span class="hljs-addition">+ width: 400px;</span>
+<span class="hljs-addition">+ height: 300px;</span>
+<span class="hljs-addition">+ background: #efefef;</span>
+}
+
+<span class="hljs-deletion">- .box {</span>
+<span class="hljs-deletion">-   display: flex;</span>
+<span class="hljs-deletion">-   align-items: center;</span>
+<span class="hljs-deletion">-   justify-content: center;</span>
+<span class="hljs-deletion">- }</span>
+</code></pre>
+<h2 id="&#x25BC;-&#x5168;&#x4F53;&#x3092;&#x4E0A;&#x4E0B;&#x4E2D;&#x592E;&#x63C3;&#x3048;&#x306B;&#x3059;&#x308B;">&#x25BC; &#x5168;&#x4F53;&#x3092;&#x4E0A;&#x4E0B;&#x4E2D;&#x592E;&#x63C3;&#x3048;&#x306B;&#x3059;&#x308B;</h2>
+<p><strong>styles.css</strong></p>
+<pre><code class="lang-diff">  width: 400px;
+  height: 300px;
+  background: #efefef;
+
+<span class="hljs-addition">+ justify-content: center;</span>
+<span class="hljs-addition">+ align-content: center;</span>
 }
 </code></pre>
-<p>&#x3053;&#x3046;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x4F59;&#x767D;&#x304C;&#x3042;&#x308B;&#x5834;&#x5408;&#x306F;&#x5E38;&#x306B;&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x5E45;&#x304C; <code>1fr</code> &#x3067;&#x6307;&#x5B9A;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x308B;&#xFF0E;</p>
+<h2 id="&#x25BC;-&#x8981;&#x7D20;&#x3092;&#x4E0A;&#x4E0B;&#x4E2D;&#x592E;&#x63C3;&#x3048;&#x306B;&#x3059;&#x308B;">&#x25BC; &#x8981;&#x7D20;&#x3092;&#x4E0A;&#x4E0B;&#x4E2D;&#x592E;&#x63C3;&#x3048;&#x306B;&#x3059;&#x308B;</h2>
+<p><strong>styles.css</strong></p>
+<pre><code class="lang-diff">  width: 400px;
+  height: 300px;
+  background: #efefef;
+
+  justify-content: center;
+  align-content: center;
+
+<span class="hljs-addition">+ justify-items: center;</span>
+<span class="hljs-addition">+ align-items: center;</span>
+}
+</code></pre>
+<p>&#x3053;&#x308C;&#x3060;&#x3068;&#x30B5;&#x30A4;&#x30BA;&#x304C;&#x81EA;&#x52D5;&#x3067;&#x6700;&#x5C0F;&#x5316;&#x3057;&#x3066;&#x3057;&#x307E;&#x3046;&#x306E;&#x3067;&#xFF0C;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#xFF0E;</p>
+<p><strong>styles.css</strong></p>
+<pre><code class="lang-diff"><span class="hljs-addition">+ .box {</span>
+<span class="hljs-addition">+   width: 50px;</span>
+<span class="hljs-addition">+   height: 50px;</span>
+<span class="hljs-addition">+ }</span>
+</code></pre>
+<h2 id="&#x25BC;-item2-&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x306E;&#x307F;-start-&#x6307;&#x5B9A;">&#x25BC; item2 &#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x306E;&#x307F; start &#x6307;&#x5B9A;</h2>
+<p><strong>styles.css</strong></p>
+<pre><code class="lang-diff">.item2 {
+  background: #3d92a4;
+  color: #fff;
+
+<span class="hljs-addition">+ justify-self: start;</span>
+<span class="hljs-addition">+ align-self: start;</span>
+}
+</code></pre>
 
                                 
                                 </section>
@@ -346,14 +392,10 @@
 
             
                 
-                <a href="repeat.html" class="navigation navigation-prev " aria-label="Previous page: 繰り返し生成">
+                <a href="grid_area.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 配置する領域を指定">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="auto_rows.html" class="navigation navigation-next " aria-label="Next page: はみ出した行の縦幅">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -362,7 +404,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"サイズの範囲指定と余白の均等化","level":"1.1.5","depth":2,"next":{"title":"はみ出した行の縦幅","level":"1.1.6","depth":2,"path":"docs/auto_rows.md","ref":"docs/auto_rows.md","articles":[]},"previous":{"title":"繰り返し生成","level":"1.1.4","depth":2,"path":"docs/repeat.md","ref":"docs/repeat.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/minmax_auto_fit.md","mtime":"2021-01-11T11:17:13.690Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-11T15:23:43.304Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"要素を揃えるプロパティ","level":"1.1.10","depth":2,"previous":{"title":"配置する領域を指定","level":"1.1.9","depth":2,"path":"docs/grid_area.md","ref":"docs/grid_area.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/adjust_elements.md","mtime":"2021-01-11T15:21:45.016Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-11T15:23:43.304Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
