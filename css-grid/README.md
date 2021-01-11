@@ -10,3 +10,5 @@ CSS Grid に関する勉強のメモ
 - gap
 - repeat()
 - auto-fill
+- minmax()
+- auto-fit
