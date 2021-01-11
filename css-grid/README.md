@@ -21,3 +21,9 @@ CSS Grid に関する勉強のメモ
 - dense
 - grid-template-areas
 - grid-area
+- justify-content
+- align-content
+- justify-items
+- align-items
+- justify-self
+- align-self

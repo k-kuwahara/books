@@ -10,3 +10,4 @@
   - [グリッドラインを使用](docs/grid_line.md)
   - [向きとサイズを変更](docs/flow_size_change.md)
   - [配置する領域を指定](docs/grid_area.md)
+  - [要素を揃えるプロパティ](docs/adjust_elements.md)
