@@ -13,3 +13,6 @@ CSS Grid に関する勉強のメモ
 - minmax()
 - auto-fit
 - grid-auto-rows
+- grid-column
+- grid-row
+- 範囲の指定
