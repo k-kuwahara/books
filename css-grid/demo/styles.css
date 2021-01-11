@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+
+  grid-template-columns: 2fr 100px 1fr;
+  grid-template-rows: 100px 100px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item1 {
+  background: #2c3f55;
+  color: #fff;
+}
+
+.item2 {
+  background: #3d92a4;
+  color: #fff;
+}
+
+.item3 {
+  background: #f1907e;
+}
+
+.item4 {
+  background: #9b5b19;
+}
+
+.item5 {
+  background: #e5dcd9;
+}

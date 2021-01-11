@@ -1,0 +1,485 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>プロトタイプチェーン · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../call_apply.html" />
+    
+    
+    <link rel="prev" href="prototype.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    はじめに
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../preparation.html">
+            
+                <a href="../preparation.html">
+            
+                    
+                    準備
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../basic.html">
+            
+                <a href="../basic.html">
+            
+                    
+                    基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../prototype.html">
+            
+                <a href="../prototype.html">
+            
+                    
+                    プロトタイプ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="new.html">
+            
+                <a href="new.html">
+            
+                    
+                    インスタンスの生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="prototype.html">
+            
+                <a href="prototype.html">
+            
+                    
+                    プロトタイプ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.3.3" data-path="chain.html">
+            
+                <a href="chain.html">
+            
+                    
+                    プロトタイプチェーン
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../call_apply.html">
+            
+                <a href="../call_apply.html">
+            
+                    
+                    call, apply メソッド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../promise.html">
+            
+                <a href="../promise.html">
+            
+                    
+                    プロミス
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    ES2015
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../arrow_func.html">
+            
+                <a href="../arrow_func.html">
+            
+                    
+                    Arrow Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../others.html">
+            
+                <a href="../others.html">
+            
+                    
+                    その他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >プロトタイプチェーン</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x30C1;&#x30A7;&#x30FC;&#x30F3;">&#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x30C1;&#x30A7;&#x30FC;&#x30F3;</h1>
+<h2 id="&#x25BC;&#x8AAC;&#x660E;">&#x25BC;&#x8AAC;&#x660E;</h2>
+<p>&#x307E;&#x305A;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x898B;&#x3066;&#x4E0B;&#x3055;&#x3044;&#x3002;</p>
+<pre><code class="lang-JavaScript">// &#x95A2;&#x6570;&#x3092;&#x5B9A;&#x7FA9;
+let hello = function () {}
+
+// &#x4E2D;&#x8EAB;&#x3092;&#x78BA;&#x8A8D;
+console.dir(hello)
+
+// &#x3053;&#x3093;&#x306A;&#x611F;&#x3058;
+function hello()
+   arguments: null
+   caller: null
+   length: 0
+   name: &quot;hello&quot;
+   prototype: Object   // &#x2190;&#x3053;&#x306E;&#x5B50;&#x3068;
+   __proto__: ()   // &#x2190;&#x3053;&#x306E;&#x5B50;&#x304C;&#x30DD;&#x30A4;&#x30F3;&#x30C8;
+   [[FunctionLocation]]: VM701:2
+   [[Scopes]]: Scopes[1]
+</code></pre>
+<p><code>prototype</code> &#x306F;&#x7F6E;&#x3044;&#x3066;&#x304A;&#x3044;&#x3066;&#x3001; <code>__proto__</code>&#x306B;&#x3064;&#x3044;&#x3066;&#x3002;
+&#x3053;&#x306E;&#x5B50;&#x306F;&#x8AB0;&#x304B;&#x3068;&#x3044;&#x3046;&#x3068;&#x3001;<strong><code>Function</code>&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x306E;<code>prototype</code></strong>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3057;&#x305F;&#x3002;</p>
+<pre><code class="lang-JavaScript">hello.__proto__ === <span class="hljs-built_in">Function</span>.prototype   <span class="hljs-comment">// =&gt; true</span>
+
+<span class="hljs-comment">// &#x3061;&#x306A;&#x307F;&#x306B;</span>
+<span class="hljs-built_in">Function</span>.__proto__ === <span class="hljs-built_in">Object</span>.__proto__   <span class="hljs-comment">// =&gt; true</span>
+</code></pre>
+<p>&#xFF08;&#x3053;&#x3053;&#x304B;&#x3089;&#x304C;&#x4ECA;&#x56DE;&#x306E;&#x5185;&#x5BB9;&#xFF09;</p>
+<p>&#x3067;&#x306F;&#x3001;<code>Function</code>&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x306E;<code>prototype</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;<code>hoge</code>&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3001;<code>hello</code>&#xFF08;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#xFF09;&#x304B;&#x3089;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">// hoge&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x3092;&#x8FFD;&#x52A0;</span>
+<span class="hljs-built_in">Function</span>.prototype.hoge = {name: <span class="hljs-string">&apos;hoge&apos;</span>}
+
+<span class="hljs-comment">// hoge&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;</span>
+hello.hoge   <span class="hljs-comment">// =&gt; Object {name: &quot;hoge&quot;}</span>
+</code></pre>
+<p>&#x6539;&#x3081;&#x3066;<code>hello</code>&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;
+&#x3057;&#x304B;&#x3057;&#x3001;<code>hoge</code>&#x3068;&#x3044;&#x3046;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x306F;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;&#x306F;&#x305A;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x305D;&#x3053;&#x3067;&#x3001;<code>prototype</code>&#x3068;<code>__proto__</code>&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x518D;&#x5EA6;&#x4E2D;&#x8EAB;&#x3092;&#x78BA;&#x8A8D;</span>
+<span class="hljs-built_in">console</span>.dir(hello)
+
+<span class="hljs-comment">/** prototype **/</span>
+<span class="hljs-built_in">console</span>.dir(hello.prototype)
+
+<span class="hljs-comment">// &#x3053;&#x3093;&#x306A;&#x611F;&#x3058;</span>
+<span class="hljs-built_in">Object</span>
+   <span class="hljs-keyword">constructor</span>: ()
+   __proto__: Object
+
+// &#x3064;&#x307E;&#x308A;&#x3001;prototype&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x3082;&#x3044;&#x306A;&#x3044;&#x3068;&#x3002;&#x6B21;&#x3002;
+
+
+/** __proto__ **/
+console.dir(hello.__proto__)
+
+// &#x3053;&#x3093;&#x306A;&#x611F;&#x3058;
+function anonymous()
+   &#xFF08;&#x4E2D;&#x7565;&#xFF09;
+   <span class="hljs-keyword">constructor</span>: Function()
+   hoge: Object   // &#x2190;&#x3044;&#x305F;&#x30FC;!!!!
+   length: 0
+   name: &quot;&quot;
+   toString: toString()
+   &#xFF08;&#x4E2D;&#x7565;&#xFF09;
+   __proto__: Object
+   [[FunctionLocation]]: &lt;unknown&gt;
+</code></pre>
+<p>&#x4E0A;&#x8A18;&#x304B;&#x3089;&#x3001;<code>hoge</code>&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x306F;<code>hello.__proto__</code>&#x306E;&#x4E2D;&#x306B;&#x3044;&#x308B;&#x3053;&#x3068;&#x304C;&#x308F;&#x304B;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;&#x3053;&#x3053;&#x3067;&#x4E00;&#x3064;&#x7591;&#x554F;&#x304C;&#x3002;</p>
+<ul>
+<li>Q: <code>hello.__proto__.hoge</code>&#x3067;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3059;&#x308B;&#x3093;&#x3058;&#x3083;&#x306A;&#x3044;&#x306E;&#xFF1F;</li>
+<li>A: &#x305D;&#x308C;&#x306F;&#x76F4;&#x63A5;&#x7684;&#x306A;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x306E;&#x4ED5;&#x65B9;&#x3067;&#x3001; <code>hello.hoge</code>&#x3067;&#x3082;OK&#x3002;&#x305D;&#x308C;&#x304C;<strong>&#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x30C1;&#x30A7;&#x30FC;&#x30F3;</strong>&#x3002;</li>
+</ul>
+<p>JavaScript&#x3067;&#x306F;&#x3001;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3059;&#x308B;&#x969B;&#x306F;&#x3001;</p>
+<ol>
+<li>&#x307E;&#x305A;&#x306F;<strong>&#x5BFE;&#x8C61;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</strong>&#x306E;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x3092;&#x63A2;&#x3059;</li>
+<li>&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3051;&#x308C;&#x3070;&#x3001;&#x5BFE;&#x8C61;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;<strong><code>prototype</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</strong>&#x3092;&#x63A2;&#x3059;</li>
+<li>&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3051;&#x308C;&#x3070;&#x3001;&#x5BFE;&#x8C61;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;<strong>&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x306E;<code>prototype</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</strong>&#x3092;&#x63A2;&#x3059;</li>
+<li>&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3051;&#x308C;&#x3070;&#x3001;<strong><code>Object</code>&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x306E;<code>prototype</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</strong>&#x3092;&#x63A2;&#x3059;</li>
+<li>&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3051;&#x308C;&#x3070;<code>undefined</code>&#x3092;&#x8FD4;&#x3059;</li>
+</ol>
+<p>&#x3068;&#x3044;&#x3046;&#x3088;&#x3046;&#x306B;&#x3001;<code>__proto__</code>&#x3092;&#xFF08;&#x3082;&#x3063;&#x3068;&#x8A00;&#x3046;&#x3068;&#x3001;&#x57FA;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;<code>prototype</code>&#x3092;&#xFF09;&#x8FFD;&#x3063;&#x3066;&#x63A2;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3092;<strong>&#x30D7;&#x30ED;&#x30C8;&#x30BF;&#x30A4;&#x30D7;&#x30C1;&#x30A7;&#x30FC;&#x30F3;</strong>&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;
+&#x6700;&#x5F8C;&#x306B;&#x3001;&#x3053;&#x306E;<code>hoge</code>&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x306B;&#x306F;<strong>&#x65B0;&#x305F;&#x306A;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304B;&#x3089;&#x3082;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x304C;&#x53EF;&#x80FD;</strong>&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">/**
+ * Function&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x306E;prototype&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;
+ * hoge&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x3092;&#x8FFD;&#x52A0;&#x6E08;&#x307F;
+ */</span>
+<span class="hljs-keyword">var</span> bye = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+<span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Function</span>()
+
+bye.hoge   <span class="hljs-comment">// =&gt; Object {name: &quot;hoge&quot;}</span>
+foo.hoge   <span class="hljs-comment">// =&gt; Object {name: &quot;hoge&quot;}</span>
+
+<span class="hljs-comment">// Object&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x306E;toString&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3082;&#x547C;&#x3079;&#x308B;</span>
+foo.toString   <span class="hljs-comment">// =&gt; function toString() { [native code] }</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="prototype.html" class="navigation navigation-prev " aria-label="Previous page: プロトタイプ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../call_apply.html" class="navigation navigation-next " aria-label="Next page: call, apply メソッド">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"プロトタイプチェーン","level":"1.1.3.3","depth":3,"next":{"title":"call, apply メソッド","level":"1.1.4","depth":2,"path":"docs/call_apply.md","ref":"docs/call_apply.md","articles":[]},"previous":{"title":"プロトタイプ","level":"1.1.3.2","depth":3,"path":"docs/prototype/prototype.md","ref":"docs/prototype/prototype.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/prototype/chain.md","mtime":"2021-01-11T09:39:22.838Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-11T10:23:46.548Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
